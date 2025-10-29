@@ -1,7 +1,6 @@
 
 # Inventory Management System — cleaned and fixed
-# Consolidated imports, removed duplicate function definitions,
-# fixed minor logic bugs, and made the UI code consistent.
+
 # NOTE: This file expects external packages: pillow, reportlab, qrcode, pandas, matplotlib, openpyxl.
 # If any are missing, install via pip.
 
@@ -1695,8 +1694,8 @@ def send_invoice_email(to_email, pdf_path, customer_name, total_amount):
     Send invoice PDF via Gmail SMTP.
     ⚠️ Requires Gmail App Password (not your normal password).
     """
-    sender_email = "lalbaghenterprises@gmail.com"        # CHANGE THIS
-    sender_password = "lojn yuaa tcfn rqxa"       # CHANGE THIS (from Google → App Passwords)
+    sender_email = ""        # CHANGE THIS
+    sender_password = ""       # CHANGE THIS (from Google → App Passwords)
     smtp_server = "smtp.gmail.com"
     smtp_port = 587
 
@@ -3275,4 +3274,5 @@ class SectionStockLogs(tk.Frame):
 if __name__ == "__main__":
     init_db()
     app = InventoryApp()
+
     app.mainloop()
